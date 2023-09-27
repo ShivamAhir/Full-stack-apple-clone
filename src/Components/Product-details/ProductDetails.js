@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './ProductDetails.css';
 import CommentBox from '../../Comment-box/Comment-box';
 import ProductRating from '../Product-Rating/ProductRating';
+import OldComments from '../OldComments/OldComment';
 
 function ProductDetails( props) {
 
@@ -105,6 +106,7 @@ const addToCart = async (event) => {
       </div>
     </div>
     <CommentBox  product_id={_id}></CommentBox>
+    <OldComments product={_id}></OldComments>
     </div>
   );
 }

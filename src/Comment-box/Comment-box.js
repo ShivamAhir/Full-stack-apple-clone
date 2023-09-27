@@ -1,10 +1,9 @@
+// CommentBox.js
+
 import React, { useState } from 'react';
 import './Comment-box.css';
 
 function CommentBox(props) {
-  const image =
-    'https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=';
-
   const [rating, setRating] = useState('');
   const [comment, setComment] = useState('');
 
@@ -17,12 +16,12 @@ function CommentBox(props) {
 
     const formData = {
       product_id: props.product_id,
-      rating: rating, // Update rating from state
-      comment: comment,
+      rating,
+      comment,
     };
 
     try {
-      const response = await fetch('/api/commentBox', {
+      const response = await fetch('/api/commentbox', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +45,11 @@ function CommentBox(props) {
   return (
     <div className='newComment'>
       <div className='userBox'>
-        <img id='userP' src={image} alt='User Profile' />
+        <img
+          id='userP'
+          src='https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI='
+          alt='User Profile'
+        />
         <span id='Username'>You</span>
       </div>
       <form className='rating-form' onSubmit={handleSubmit}>
@@ -57,8 +60,7 @@ function CommentBox(props) {
             id='star1'
             name='rating'
             value='5'
-            
-            onChange={handleRatingChange} // Add onChange handler
+            onChange={handleRatingChange}
           />
           <label htmlFor='star1'>★</label>
           <input
@@ -66,8 +68,7 @@ function CommentBox(props) {
             id='star2'
             name='rating'
             value='4'
-            
-            onChange={handleRatingChange} // Add onChange handler
+            onChange={handleRatingChange}
           />
           <label htmlFor='star2'>★</label>
           <input
@@ -75,7 +76,7 @@ function CommentBox(props) {
             id='star3'
             name='rating'
             value='3'
-            onChange={handleRatingChange} // Add onChange handler
+            onChange={handleRatingChange}
           />
           <label htmlFor='star3'>★</label>
           <input
@@ -83,8 +84,7 @@ function CommentBox(props) {
             id='star4'
             name='rating'
             value='2'
-            
-            onChange={handleRatingChange} // Add onChange handler
+            onChange={handleRatingChange}
           />
           <label htmlFor='star4'>★</label>
           <input
@@ -92,8 +92,7 @@ function CommentBox(props) {
             id='star5'
             name='rating'
             value='1'
-            
-            onChange={handleRatingChange} // Add onChange handler
+            onChange={handleRatingChange}
           />
           <label htmlFor='star5'>★</label>
         </div>
