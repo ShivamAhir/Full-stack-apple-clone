@@ -1,0 +1,26 @@
+/* ProductRating.css */
+.product-rating {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: #f2c53d;
+  }
+  
+  .stars {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .star {
+    font-size: 30px;
+    color: #e0e0e0; /* Change the color of empty stars as needed */
+  }
+  
+  .star.filled {
+    color: #f2c53d;
+  }
+  
+  .rating-text {
+    font-weight: bold;
+  }
+  

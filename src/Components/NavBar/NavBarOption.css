@@ -1,0 +1,10 @@
+.Button{
+    background-color: black;
+    color: aliceblue;
+    font-size: 20px;
+    height: 0px;
+    margin-left: 30px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}

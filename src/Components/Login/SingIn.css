@@ -1,0 +1,29 @@
+.logInPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+.fieldName{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 3vh;
+}
+.Input-box{
+    width: 35vh;
+    height: 4vh;
+    font-size: 2vh;
+}
+.optionName{
+    font-size: 4vh;
+}
+#sign,#log{
+    width: 35vh;
+    display: flex;
+    align-items:center;
+}
+.sinlog-mess{
+    margin-top: 25px;
+    text-align: center;
+}

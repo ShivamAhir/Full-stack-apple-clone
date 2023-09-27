@@ -1,0 +1,13 @@
+.navbar-parent{
+  display: flex;
+  background-color: black;
+}
+.navbar {
+    
+    height: 50px;
+    display: flex;
+    justify-content: center; 
+    width: 100%;  
+  }
+
+  

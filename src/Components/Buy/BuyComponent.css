@@ -1,0 +1,25 @@
+.left-box-cart{
+    width: 70vw;
+}
+.product-logo{
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 200px;
+}
+#container-cart{
+    display: flex;                  
+   
+}
+
+#product-description{
+    margin-left: 100px;
+    width: 30%;
+}
+.trd-box{
+    /* margin-left: 140px; */
+    width: 30%;
+}
+.img{
+    width: 30vw;
+}

@@ -1,0 +1,53 @@
+.newComment{
+    margin-left: 20px;
+    margin-top: 60px;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width:240px;
+    margin-top: -100px;
+    
+  }
+  .userBox{
+    display: flex;
+    gap: 10px;
+  }
+  #userP{
+    width: 50px;
+    border-radius: 100px;
+  }
+  #Username{
+    font-size: 30px;
+  }
+  .rating input {
+    display: none;
+  }
+  .rating label {
+    font-size: 40px;
+    margin-left: 10px;
+    width: 1em;
+    cursor: pointer;
+    color: #ccc;
+  }
+  .rating label:hover {
+    color: #f2c53d;
+  }
+  #comment{
+    font-size: 20px;
+    width: 420px;
+  }
+  .rating input:checked ~ label {
+    color: #f2c53d;
+  }
+  #Feedback-submit{
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    margin-left: 330px;
+  }
+  
+.writing-section{
+    margin-top: -30px;
+}

@@ -1,0 +1,55 @@
+p{
+    font-size: 20px;
+}
+.product{
+    width: 400px;
+    margin-top: 70px;
+}
+#one{
+    margin-top: 30px;
+    float: inline-end;
+    display: inline-flex;
+    justify-content: center;
+}
+#two,#three{
+    display: inline-block;
+    width: 650px;
+}
+#two:hover,#three:hover{
+    background-color: rgb(249, 240, 249);
+}
+#two{
+   
+    height: 600px;
+    /* background-color: blue; */}
+#three{
+   margin-left: 30px;
+    text-align: center;
+    /* background-color: red; */
+}
+.Show-details{
+    background-color: black;
+    color: aliceblue;
+    font-size: 20px;
+    height: 40px;
+    margin-left: 10px;
+}
+.buy-button{
+    width: 100px;
+}
+.Show-details{
+    width: 100px;
+    cursor: pointer;
+}
+#record{
+    margin-left: 30px;
+    margin-top: 120px;
+}
+.in-stock {
+    color: green;
+  }
+  
+  .out-of-stock {
+    color: red;
+  }
+  
