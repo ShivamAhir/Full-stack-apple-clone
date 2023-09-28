@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './ProductDetails.css';
 import CommentBox from '../../Comment-box/Comment-box';
-import ProductRating from '../Product-Rating/ProductRating';
+
 import OldComments from '../OldComments/OldComment';
+import LiveRating from '../LiveRating/LiveRating';
 
 function ProductDetails( props) {
 
@@ -25,7 +26,8 @@ useEffect(() => {
         console.error('Error fetching data:', error);
       });
   }
-}, [itemId]);
+}, [props.product, itemId]); // Include props.product in the dependency array
+
 
 const addToCart = async (event) => {
   event.preventDefault();
@@ -54,7 +56,7 @@ const addToCart = async (event) => {
   };
 
   // Destructure data inside the component
-  const { link, name, price,bool, display, size ,_id} = data;
+  const { link, name, price,bool, display, size ,_id,alreadyComment} = data;
   var stock=bool ?<p id="out-of-stock">Out Of Stock</p>:<p id="in-stock">"In Stock"</p>
   return (
     <div>
@@ -100,12 +102,17 @@ const addToCart = async (event) => {
               Price: <i className="fa-sharp fa-solid fa-indian-rupee-sign" style={{ color: '#000000' }}></i>
               <span id="product-price">{price}</span>
             </p>
-            <ProductRating rating='4'></ProductRating>
+            <LiveRating product={_id}></LiveRating>
           </div>
         </div>
       </div>
     </div>
-    <CommentBox  product_id={_id}></CommentBox>
+    { 
+      alreadyComment===true?
+      (<div></div>)
+      :
+      (<CommentBox  product_id={_id}></CommentBox>)
+    }
     <OldComments product={_id}></OldComments>
     </div>
   );
